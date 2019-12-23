@@ -9,7 +9,7 @@ import java.util.Date;
 //数据库链接池管理类
 public final class DBConnectionPool extends Pool {
     private int checkedOut;//正在使用的连接数
-    private Vector<Connection> freeConnections = new Vector<Connection>();//存放产生的连接对 象容器
+    private Vector<Connection> freeConnections = new Vector<Connection>();//存放产生的连接对象容器
     private String password = null; // 密码
     private String url = null;//连接字符串
     private String userName = null;//用户名
@@ -19,7 +19,7 @@ public final class DBConnectionPool extends Pool {
 
 
     //产生数据连接池
-    public static synchronized DBConnectionPool getlnstance() {
+    public static synchronized DBConnectionPool getInstance() {
         if (pool == null) {
             pool = new DBConnectionPool();
         }
