@@ -1,4 +1,4 @@
-package java.other;
+package nju.java.pattern.factory_pattern;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -148,7 +148,7 @@ public final class DBConnectionPool extends Pool {
                     con.close();
                     num--;
                 } catch (SQLException e) {
-                    System.out.println("羌必关闭连接池中的连接");
+                    System.out.println("无法关闭连接池中的连接");
                 }
             }
             freeConnections.removeAllElements();

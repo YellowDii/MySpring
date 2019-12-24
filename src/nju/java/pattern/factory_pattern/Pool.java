@@ -1,4 +1,4 @@
-package java.other;
+package nju.java.pattern.factory_pattern;
 
 import java.io.IOException;
 import java.io.InputStream;
