@@ -1,8 +1,8 @@
 package nju.java.pattern.singleton_pattern;
 
 public class LazyInnerClassSingleton {
-    //使用 Lazyinne ClassGene al 的时候， 认会先初始化内部
-    //如果没使用， 内部类是不加载的
+    //使用 LazyinnerClassGeneral 的时候，默认会先初始化内部
+    //如果没使用，则内部类是不加载的
     //原先版本
 //    private LazyInnerClassSingleton(){}
 
@@ -15,7 +15,7 @@ public class LazyInnerClassSingleton {
         private static final LazyInnerClassSingleton LAZY=new LazyInnerClassSingleton();
     }
     //上面版本有个问题 就是如果调用LazyInnerClassSingletonTest 是会出现问题的
-    //所以下面有个书中所说的无敌强的完美的版本实现单例模式
+    //所以下面有个书中所说的无敌强的完美的版本 实现单例模式
     private LazyInnerClassSingleton(){
         if (LazyHolder.LAZY!=null){
             throw new RuntimeException("不允许创建多个实例");

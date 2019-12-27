@@ -18,7 +18,7 @@ public class SeriableSingletonTest {
             oos.writeObject(s2);
             oos.flush();
             oos.close();
-            FileInputStream fis = new FileInputStream(" SeriableSingleton.obj");
+            FileInputStream fis = new FileInputStream("SeriableSingleton.obj");
             ObjectInputStream ois = new ObjectInputStream(fis);
             sl = (SeriableSingleton) ois.readObject();
             ois.close();
